@@ -1,0 +1,2 @@
+<add name="Home_ARC_ORGConnectionString" connectionString="Data Source=amcssql02.amcs.com\sqlexpressr2,1435;Initial Catalog=ARC_ORG;Integrated Security=True; Persist Security Info=False;Connect Timeout=120"
+    providerName="System.Data.SqlClient" />

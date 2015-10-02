@@ -1,0 +1,10 @@
+﻿<pages controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+    <controls>
+        <add tagPrefix="MY" tagName="ActiveMenu" src="~/Controls/ActiveMenu.ascx"/>
+        <add tagPrefix="MY" tagName="ActiveMenu2" src="~/Controls/ActiveMenu2.ascx"/>
+        <add tagPrefix="MY" tagName="MobileMenu" src="~/Controls/MobileMenu.ascx"/>
+        <add tagPrefix="MY" tagName="Recurring_Appts" src="~/Controls/Recurring_Appts.ascx" />
+        <add tagPrefix="MY" tagName="Recurring_Dates" src="~/Controls/Recurring_Dates.ascx" />
+        <add tagPrefix="tasp" namespace="TihBlogCompact.Controls" assembly="TihBlogCompact" />
+    </controls>
+</pages>

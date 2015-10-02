@@ -1,0 +1,108 @@
+/*   Standard   */
+
+body { font-family: Trebuchet MS; background-image: url(./images/Arc_Brush3_Blue_PNG.png); background-repeat: no-repeat; }
+h1, h2, h3, h4, h5 { font-family:Trebuchet MS; color: black; margin: 0px; }
+h1 { font-size: 28pt; }
+h2 { text-align: center; font-size: 14pt; }
+h3 { font-size: 10pt; }
+h4 { font-size: 8.5pt; }
+h5 { font-size: 6pt; }
+.p { padding: 0 0 0 20px; }
+.p1 { padding: 0 0 0 30px; }
+.p2 { padding: 150px 0 0 250px; }
+
+/************************************************/
+/*   Layout  */
+
+.MainBody { width: 1200px; margin-left: auto; margin-right: auto; }
+.CenterCol { width:678px; border: 1px solid #474747; float: left; margin: 20px 10px 25px 0px; }
+.LeftCol { width: 250px; float: left; margin: 10px 10px 25px 0px; display: inline; }
+.RightCol { width:250px; float: right; margin: 10px 0px 25px 0px; display: inline; }
+.BottomRow { width: 600px; margin-bottom: 25px; margin-right: auto; margin-left: auto; }
+td { color: Black; font-weight: normal;	font-family: Trebuchet MS; }
+.SecondColCenter { width: 1200px; margin-left: auto; margin-right: auto; }
+#footer { clear: left;  margin-top: 25px; }
+
+/*******************************************************/
+/*   Donation  */
+
+.DonationFormSubmitButton {	margin-top: 15px; }
+.DonationFormCancelButton {	margin-left: 15px; }
+.DonationIconText { font-size: 14px; }
+.DonationIconWrap { float: right;  margin: 4px; }
+
+/***************************************************/
+/*  Blog  */
+
+.BlogDiv { text-align: justify; padding: 5px; }
+.BlogTitle { font-size: 18px; }
+
+/************************************************/
+/*  Calendar   */
+
+.calendar_title { background-color: #6A6A6A; font-family: Verdana; font-size: larger; font-style: normal; color: #000000; font-weight: bold; }
+
+/**************************************************/
+
+.span_font_h3 { font-size: 14px; color: #EA7125; }
+.staff { font-size: 14px; color: #474747; margin: 0px; }
+.staff_link { font-size: 14px; margin: 0px; text-decoration: underline; color: #EA7125; }
+.bg1 { background: #2f4c7c url(images/index_11.gif) top  repeat-x; }
+.bg2 { background: #000000 url(images/index_10.gif) top no-repeat; }
+.bord { border: 1px solid #474747; }
+.bord2 { border: 1px solid #474747; text-align: left; }
+.menu { color:#8c247b; vertical-align:top; height: 35px; padding: 10px 0 0 20px; }
+.menu a { color:#8c247b; font: bold 11px  tahoma, Arial; text-decoration: none; }
+.eventlit { font-size: 14px; }
+
+/**********************************************************/
+/*   Fonts   */
+
+.white-text { color: #ffffff; text-decoration: none; }
+.blye-text-underline { color: #a257e0; text-decoration: underline; }
+.blye-text-regular { color: #a257e0; text-decoration: none; }
+.yellow-text-regular { color: #EA7125; text-decoration: none; }
+.yellow-text-underline { color: #EA7125; text-decoration: underline; }
+.blue-text-regular { color: #44697D; text-decoration: none; }
+.blue-text-underline { color: #44697D; text-decoration: underline; }
+.orange-text-regular { color: #FECB00; text-decoration: none; }
+.orange-text-underline { color: #FECB00; text-decoration: underline; }
+.broun-text-regular { color: #de4e06; text-decoration: none; }
+.broun-text-underline { color: #de4e06; text-decoration: underline; }
+.red-text-regular { color: #8c247b; text-decoration: none; }
+.red-text-underline { color: #8c247b; text-decoration: underline; }
+.black-text-regular { color: #000000; text-decoration: none; }
+.black-text-underline { color: #000000; text-decoration: underline; }
+.gray-text-underline { color: #7c7c7c; text-decoration: underline; }
+.gray-text-regular { color: #7c7c7c; text-decoration: none; }
+.green-text { color: #a5b66e; text-decoration: none; }
+.green-text-underline { color: #a5b66e; text-decoration: underline; }
+.MsoFooter {}
+
+/****************************************************/
+/*  Recurring Dates  */
+
+.Recur_Main_Div {  width: 350px; border: 2px solid #474747; padding: 10px; }
+.Recur_Table {}
+.Recur_Td { padding: 0px; }
+.Recur_CheckBox { margin-left: 15px; }
+
+/***************************************************/
+/*   Navigation   */
+/*  Styles are embedded in the Web User Control  */
+/******************************************************/
+/*  Default Page  */
+
+.defaultdiv { padding: 15px 10px 10px 10px; }
+
+/****************************************************/
+/*  HitCounter  */
+
+.HitCounter { float: right; margin-top: 50px; }
+
+/****************************************************/
+/*  User Table  */
+
+.UserTable { margin: 3px; }
+
+/****************************************************/

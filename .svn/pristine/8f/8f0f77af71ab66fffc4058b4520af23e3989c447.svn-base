@@ -1,0 +1,37 @@
+﻿<%@ Page Title="ARC Home" Language="C#" MasterPageFile="~/Main.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ARC.ORG.Default" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
+    <div class="defaultdiv">
+        <h2>The Arc of Grays Harbor wants people to know:</h2>
+        <h2>&quot;You are not alone, we&#39;ve been there, and we are here for You!&quot;</h2>
+        <br />
+        <br />                           
+        <h3>Families who have a loved one with different abilities have questions and 
+        concerns through various stages of their lives.&nbsp; The Arc advocates and 
+        supports inclusion into the community, not to be the community for people with 
+        different abilities.&nbsp; Full inclusion in all aspects of life where people 
+        live, learn, work, and play</h3>
+        <br />
+        <br />
+        <br />
+        <br/>
+        <h3 style="text-align: center"><i><span style="font-weight: normal">&quot;Yes our ambitions are mighty, but our program is not for today,nor tomorrow, </span></i></h3>
+        <h3 style="text-align: center"><i><span style="font-weight: normal">but for many years to come.&quot;</span></i></h3>
+        <h3 style="text-align: center"><i><span style="font-weight: normal">&nbsp;-Arc President (1946-1948)&nbsp;</span></i></h3>    
+        <br />
+        <object style="height: 390px; width: 640px">
+            <param name="movie" value="http://www.youtube.com/v/fBHq0X_J4ak&rel=0&hl=en_US&feature=player_embedded&version=3">
+            <param name="allowFullScreen" value="true">
+            <param name="allowScriptAccess" value="always">
+                <embed src="http://www.youtube.com/v/fBHq0X_J4ak&rel=0&hl=en_US&feature=player_embedded&version=3" 
+                    type="application/x-shockwave-flash" 
+                    allowfullscreen="true" 
+                    allowScriptAccess="always" 
+                    width="640" 
+                    height="390">
+        </object>
+    </div>
+</asp:Content>
+

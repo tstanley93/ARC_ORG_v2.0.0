@@ -1,0 +1,873 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F00CC2E6-FA25-42FC-85C6-F8BDAB012F6D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ARC</RootNamespace>
+    <AssemblyName>ARC.ORG</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ARC.ORG.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.40412.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.JScript" />
+    <Reference Include="PdfViewer">
+      <HintPath>..\..\..\..\..\Downloads\PdfTestSite\Bin\PdfViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="RecurrenceGenerator">
+      <HintPath>..\..\..\..\..\Downloads\Recurrence_Generator\RecurrenceGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Windows\assembly\GAC_MSIL\System.Web.Entity\3.5.0.0__b77a5c561934e089\System.Web.Entity.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Database_Update.aspx" />
+    <Content Include="Admin\UserAdmin\Blog_User_Admin.aspx" />
+    <Content Include="Admin\UserAdmin\Donation_Email_Tool.aspx" />
+    <Content Include="Arc_Blog.aspx" />
+    <Content Include="Arc_Blog\App_Data\TihBlogData.mdb" />
+    <Content Include="Arc_Email.html" />
+    <Content Include="arc_gh.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Controls\Navigation_Menu.ascx" />
+    <Content Include="Controls\Recurring_Dates.ascx" />
+    <Content Include="DatePicker.aspx" />
+    <Content Include="Donation.aspx" />
+    <Content Include="Donation_Items.aspx" />
+    <Content Include="Donors.aspx" />
+    <Content Include="images\1065_small.jpg" />
+    <Content Include="images\1107_small.jpg" />
+    <Content Include="images\1523_small.jpg" />
+    <Content Include="images\2banner.gif" />
+    <Content Include="images\arcgh_favicon.ico" />
+    <Content Include="images\Arc_About-Us.gif" />
+    <Content Include="images\Arc_Blog-man.jpg" />
+    <Content Include="images\Arc_Brush1_Blue_PNG.png" />
+    <Content Include="images\Arc_Brush2_Blue_PNG.png" />
+    <Content Include="images\Arc_Brush3_Blue_PNG.png" />
+    <Content Include="images\Arc_Contact-Us.gif" />
+    <Content Include="images\Arc_Events.gif" />
+    <Content Include="images\Arc_Footer.jpg" />
+    <Content Include="images\Arc_Home.gif" />
+    <Content Include="images\Arc_Logo_v2.jpg" />
+    <Content Include="images\arc_mast.gif" />
+    <Content Include="images\Arc_Resources.gif" />
+    <Content Include="images\Arc_Services.gif" />
+    <Content Include="images\Arc_You-Can-Help.gif" />
+    <Content Include="images\arrow_right_black.gif" />
+    <Content Include="images\brick frame.jpg" />
+    <Content Include="images\calendario.png" />
+    <Content Include="images\checked-box.gif" />
+    <Content Include="images\donate.gif" />
+    <Content Include="images\down_arrow.jpg" />
+    <Content Include="images\email.jpg" />
+    <Content Include="images\Forms.jpg" />
+    <Content Include="images\home.gif" />
+    <Content Include="images\index_01.gif" />
+    <Content Include="images\index_02.gif" />
+    <Content Include="images\index_03.jpg" />
+    <Content Include="images\index_04.gif" />
+    <Content Include="images\index_05.gif" />
+    <Content Include="images\index_06.gif" />
+    <Content Include="images\index_07.gif" />
+    <Content Include="images\index_08.gif" />
+    <Content Include="images\index_09.gif" />
+    <Content Include="images\index_10.gif" />
+    <Content Include="images\index_11.gif" />
+    <Content Include="images\index_12.gif" />
+    <Content Include="images\index_13.gif" />
+    <Content Include="images\index_14.gif" />
+    <Content Include="images\index_15.gif" />
+    <Content Include="images\index_16.gif" />
+    <Content Include="images\index_17.gif" />
+    <Content Include="images\index_18.jpg" />
+    <Content Include="images\index_19.gif" />
+    <Content Include="images\index_20.gif" />
+    <Content Include="images\index_21.gif" />
+    <Content Include="images\index_22.jpg" />
+    <Content Include="images\index_23.gif" />
+    <Content Include="images\index_24.gif" />
+    <Content Include="images\index_25.gif" />
+    <Content Include="images\NewPostBlog.gif" />
+    <Content Include="images\newspaper_bw.jpg" />
+    <Content Include="images\small-business-blog.jpg" />
+    <Content Include="images\spacer.gif" />
+    <Content Include="images\truck.jpg" />
+    <Content Include="images\unitedwaylogo.bmp" />
+    <Content Include="images\user-group-icon.png" />
+    <Content Include="images\User-icon.png" />
+    <Content Include="images\User.png" />
+    <Content Include="images\weblogo2_bob_Web.jpg" />
+    <Content Include="menu.js" />
+    <Content Include="MobileAboutUs.aspx" />
+    <Content Include="MobileResources.aspx" />
+    <Content Include="MobileServices.aspx" />
+    <Content Include="MobileSportsandFitness.aspx" />
+    <Content Include="MobileYouCanHelp.aspx" />
+    <Content Include="niftycube.js" />
+    <Content Include="Recurring_Date.aspx" />
+    <Content Include="Scholarships.aspx" />
+    <Content Include="style.css" />
+    <Content Include="VolunteerProgram.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutusBoard.aspx.cs">
+      <DependentUpon>AboutusBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutusBoard.aspx.designer.cs">
+      <DependentUpon>AboutusBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUsHistory.aspx.cs">
+      <DependentUpon>AboutUsHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsHistory.aspx.designer.cs">
+      <DependentUpon>AboutUsHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutusMission.aspx.cs">
+      <DependentUpon>AboutusMission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutusMission.aspx.designer.cs">
+      <DependentUpon>AboutusMission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutusCorevalues.aspx.cs">
+      <DependentUpon>AboutusCorevalues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutusCorevalues.aspx.designer.cs">
+      <DependentUpon>AboutusCorevalues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUsStaff.aspx.cs">
+      <DependentUpon>AboutUsStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUsStaff.aspx.designer.cs">
+      <DependentUpon>AboutUsStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Aboutusvision.aspx.cs">
+      <DependentUpon>Aboutusvision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Aboutusvision.aspx.designer.cs">
+      <DependentUpon>Aboutusvision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CalendarAdmin\Calendar_Modify.aspx.cs">
+      <DependentUpon>Calendar_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CalendarAdmin\Calendar_Modify.aspx.designer.cs">
+      <DependentUpon>Calendar_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CalendarAdmin\Calendar_Update_2.aspx.cs">
+      <DependentUpon>Calendar_Update_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CalendarAdmin\Calendar_Update_2.aspx.designer.cs">
+      <DependentUpon>Calendar_Update_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Database_Update.aspx.cs">
+      <DependentUpon>Database_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Database_Update.aspx.designer.cs">
+      <DependentUpon>Database_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewletter_Update.aspx.cs">
+      <DependentUpon>eNewletter_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewletter_Update.aspx.designer.cs">
+      <DependentUpon>eNewletter_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewsLetter_Email.aspx.cs">
+      <DependentUpon>eNewsLetter_Email.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewsLetter_Email.aspx.designer.cs">
+      <DependentUpon>eNewsLetter_Email.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewsletter_Modify.aspx.cs">
+      <DependentUpon>eNewsletter_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\NewsAdmin\eNewsletter_Modify.aspx.designer.cs">
+      <DependentUpon>eNewsletter_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PicAdmin\PictureGallery_Modify.aspx.cs">
+      <DependentUpon>PictureGallery_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PicAdmin\PictureGallery_Modify.aspx.designer.cs">
+      <DependentUpon>PictureGallery_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\PicAdmin\PictureGallery_Update.aspx.cs">
+      <DependentUpon>PictureGallery_Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\PicAdmin\PictureGallery_Update.aspx.designer.cs">
+      <DependentUpon>PictureGallery_Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Blog_User_Admin.aspx.cs">
+      <DependentUpon>Blog_User_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Blog_User_Admin.aspx.designer.cs">
+      <DependentUpon>Blog_User_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Board_Update_Tool.aspx.cs">
+      <DependentUpon>Board_Update_Tool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Board_Update_Tool.aspx.designer.cs">
+      <DependentUpon>Board_Update_Tool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Donation_Email_Tool.aspx.cs">
+      <DependentUpon>Donation_Email_Tool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Donation_Email_Tool.aspx.designer.cs">
+      <DependentUpon>Donation_Email_Tool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\SportsandFitness_Forms_Update_Tool.aspx.cs">
+      <DependentUpon>SportsandFitness_Forms_Update_Tool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\SportsandFitness_Forms_Update_Tool.aspx.designer.cs">
+      <DependentUpon>SportsandFitness_Forms_Update_Tool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Staff_Update_Tool.aspx.cs">
+      <DependentUpon>Staff_Update_Tool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Staff_Update_Tool.aspx.designer.cs">
+      <DependentUpon>Staff_Update_Tool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Useradmin.aspx.cs">
+      <DependentUpon>Useradmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserAdmin\Useradmin.aspx.designer.cs">
+      <DependentUpon>Useradmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Arc_Blog.aspx.cs">
+      <DependentUpon>Arc_Blog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Arc_Blog.aspx.designer.cs">
+      <DependentUpon>Arc_Blog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\AppCode_Class.cs" />
+    <Compile Include="Controls\Navigation_Menu.ascx.cs">
+      <DependentUpon>Navigation_Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Navigation_Menu.ascx.designer.cs">
+      <DependentUpon>Navigation_Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Recurring_Dates.ascx.cs">
+      <DependentUpon>Recurring_Dates.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\Recurring_Dates.ascx.designer.cs">
+      <DependentUpon>Recurring_Dates.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DatePicker.aspx.cs">
+      <DependentUpon>DatePicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatePicker.aspx.designer.cs">
+      <DependentUpon>DatePicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donation.aspx.cs">
+      <DependentUpon>Donation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donation.aspx.designer.cs">
+      <DependentUpon>Donation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donation_Items.aspx.cs">
+      <DependentUpon>Donation_Items.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donation_Items.aspx.designer.cs">
+      <DependentUpon>Donation_Items.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Donors.aspx.cs">
+      <DependentUpon>Donors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Donors.aspx.designer.cs">
+      <DependentUpon>Donors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\tools.aspx.cs">
+      <DependentUpon>tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\tools.aspx.designer.cs">
+      <DependentUpon>tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contactus.aspx.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contactus.aspx.designer.cs">
+      <DependentUpon>Contactus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ActiveMenu.ascx.cs">
+      <DependentUpon>ActiveMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveMenu.ascx.designer.cs">
+      <DependentUpon>ActiveMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="enewsletter.aspx.cs">
+      <DependentUpon>enewsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="enewsletter.aspx.designer.cs">
+      <DependentUpon>enewsletter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetinvolvedPartnerships.aspx.cs">
+      <DependentUpon>GetinvolvedPartnerships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetinvolvedPartnerships.aspx.designer.cs">
+      <DependentUpon>GetinvolvedPartnerships.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetPicFiles.asmx.cs">
+      <DependentUpon>GetPicFiles.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MobileAboutUs.aspx.cs">
+      <DependentUpon>MobileAboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileAboutUs.aspx.designer.cs">
+      <DependentUpon>MobileAboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileResources.aspx.cs">
+      <DependentUpon>MobileResources.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileResources.aspx.designer.cs">
+      <DependentUpon>MobileResources.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileServices.aspx.cs">
+      <DependentUpon>MobileServices.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileServices.aspx.designer.cs">
+      <DependentUpon>MobileServices.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileSportsandFitness.aspx.cs">
+      <DependentUpon>MobileSportsandFitness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileSportsandFitness.aspx.designer.cs">
+      <DependentUpon>MobileSportsandFitness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MobileYouCanHelp.aspx.cs">
+      <DependentUpon>MobileYouCanHelp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MobileYouCanHelp.aspx.designer.cs">
+      <DependentUpon>MobileYouCanHelp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="past_eNewsletter_issues.aspx.cs">
+      <DependentUpon>past_eNewsletter_issues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="past_eNewsletter_issues.aspx.designer.cs">
+      <DependentUpon>past_eNewsletter_issues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PictureGallery.aspx.cs">
+      <DependentUpon>PictureGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PictureGallery.aspx.designer.cs">
+      <DependentUpon>PictureGallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PictureGallery_Image_View.aspx.cs">
+      <DependentUpon>PictureGallery_Image_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PictureGallery_Image_View.aspx.designer.cs">
+      <DependentUpon>PictureGallery_Image_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Recurring_Date.aspx.cs">
+      <DependentUpon>Recurring_Date.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Recurring_Date.aspx.designer.cs">
+      <DependentUpon>Recurring_Date.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesArcChapters.aspx.cs">
+      <DependentUpon>ResourcesArcChapters.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResourcesArcChapters.aspx.designer.cs">
+      <DependentUpon>ResourcesArcChapters.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesGreatInformation.aspx.cs">
+      <DependentUpon>ResourcesGreatInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResourcesGreatInformation.aspx.designer.cs">
+      <DependentUpon>ResourcesGreatInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ResourcesLocalOrganizations.aspx.cs">
+      <DependentUpon>ResourcesLocalOrganizations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResourcesLocalOrganizations.aspx.designer.cs">
+      <DependentUpon>ResourcesLocalOrganizations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scholarships.aspx.cs">
+      <DependentUpon>Scholarships.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scholarships.aspx.designer.cs">
+      <DependentUpon>Scholarships.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesArcinRoundtheCommunity.aspx.cs">
+      <DependentUpon>ServicesArcinRoundtheCommunity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesArcinRoundtheCommunity.aspx.designer.cs">
+      <DependentUpon>ServicesArcinRoundtheCommunity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesBenefitAnalysis.aspx.cs">
+      <DependentUpon>ServicesBenefitAnalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesBenefitAnalysis.aspx.designer.cs">
+      <DependentUpon>ServicesBenefitAnalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Servicesemploymentanalysis.aspx.cs">
+      <DependentUpon>Servicesemploymentanalysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Servicesemploymentanalysis.aspx.designer.cs">
+      <DependentUpon>Servicesemploymentanalysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesEmploymentbenefitanalysis.aspx.cs">
+      <DependentUpon>Services.empbendescription.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesEmploymentbenefitanalysis.aspx.designer.cs">
+      <DependentUpon>Services.empbendescription.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesInformation.aspx.cs">
+      <DependentUpon>ServicesInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesInformation.aspx.designer.cs">
+      <DependentUpon>ServicesInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesParenttoParent.aspx.cs">
+      <DependentUpon>ServicesParenttoParent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesParenttoParent.aspx.designer.cs">
+      <DependentUpon>ServicesParenttoParent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServicesReferrals.aspx.cs">
+      <DependentUpon>ServicesReferrals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServicesReferrals.aspx.designer.cs">
+      <DependentUpon>ServicesReferrals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\aquatics.aspx.cs">
+      <DependentUpon>aquatics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\aquatics.aspx.designer.cs">
+      <DependentUpon>aquatics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\cycling.aspx.cs">
+      <DependentUpon>cycling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\cycling.aspx.designer.cs">
+      <DependentUpon>cycling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\Fall_Sports.aspx.cs">
+      <DependentUpon>Fall_Sports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\Fall_Sports.aspx.designer.cs">
+      <DependentUpon>Fall_Sports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\Forms.aspx.cs">
+      <DependentUpon>Forms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\Forms.aspx.designer.cs">
+      <DependentUpon>Forms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\oursports.aspx.cs">
+      <DependentUpon>oursports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\oursports.aspx.designer.cs">
+      <DependentUpon>oursports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Second.Master.cs">
+      <DependentUpon>Second.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Second.Master.designer.cs">
+      <DependentUpon>Second.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\powerlifting.aspx.cs">
+      <DependentUpon>powerlifting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\powerlifting.aspx.designer.cs">
+      <DependentUpon>powerlifting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\soccer.aspx.cs">
+      <DependentUpon>soccer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\soccer.aspx.designer.cs">
+      <DependentUpon>soccer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\SportsandFitness.aspx.cs">
+      <DependentUpon>SportsandFitness.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\SportsandFitness.aspx.designer.cs">
+      <DependentUpon>SportsandFitness.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\Summer_Sports.aspx.cs">
+      <DependentUpon>Summer_Sports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\Summer_Sports.aspx.designer.cs">
+      <DependentUpon>Summer_Sports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\TrackandField.aspx.cs">
+      <DependentUpon>TrackandField.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\TrackandField.aspx.designer.cs">
+      <DependentUpon>TrackandField.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SportsandFitness\Winter_Sports.aspx.cs">
+      <DependentUpon>Winter_Sports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SportsandFitness\Winter_Sports.aspx.designer.cs">
+      <DependentUpon>Winter_Sports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="unsubscribe.aspx.cs">
+      <DependentUpon>unsubscribe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="unsubscribe.aspx.designer.cs">
+      <DependentUpon>unsubscribe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetInvolvedVolunteer.aspx.cs">
+      <DependentUpon>GetInvolvedVolunteer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetInvolvedVolunteer.aspx.designer.cs">
+      <DependentUpon>GetInvolvedVolunteer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VolunteerProgram.aspx.cs">
+      <DependentUpon>VolunteerProgram.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VolunteerProgram.aspx.designer.cs">
+      <DependentUpon>VolunteerProgram.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="images\ARC_Long_Logo.jpg" />
+    <Content Include="images\New_index_03.jpg" />
+    <Content Include="images\Picture1.jpg" />
+    <Content Include="images\Picture3.png" />
+    <Content Include="Main.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\ARC_Button_Chrysanthemum.jpg" />
+    <Content Include="Second.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AboutusBoard.aspx" />
+    <Content Include="AboutUsHistory.aspx" />
+    <Content Include="AboutusMission.aspx" />
+    <Content Include="AboutusCorevalues.aspx" />
+    <Content Include="AboutUsStaff.aspx" />
+    <Content Include="Aboutusvision.aspx" />
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="App_Data\ASPNETDB.MDF">
+    </Content>
+    <Content Include="App_Data\aspnetdb_log.ldf">
+      <DependentUpon>ASPNETDB.MDF</DependentUpon>
+    </Content>
+    <Content Include="login.aspx" />
+    <Content Include="Admin\tools.aspx" />
+    <Content Include="Calendar.aspx" />
+    <Content Include="Contactus.aspx" />
+    <Content Include="Controls\ActiveMenu.ascx" />
+    <Content Include="enewsletter.aspx" />
+    <Content Include="GetinvolvedPartnerships.aspx" />
+    <Content Include="GetPicFiles.asmx" />
+    <Content Include="past_eNewsletter_issues.aspx" />
+    <Content Include="PictureGallery.aspx" />
+    <Content Include="PictureGallery_Image_View.aspx" />
+    <Content Include="ResourcesArcChapters.aspx" />
+    <Content Include="ResourcesGreatInformation.aspx" />
+    <Content Include="ResourcesLocalOrganizations.aspx" />
+    <Content Include="ServicesArcinRoundtheCommunity.aspx" />
+    <Content Include="ServicesInformation.aspx" />
+    <Content Include="ServicesParenttoParent.aspx" />
+    <Content Include="ServicesReferrals.aspx" />
+    <Content Include="SportsandFitness\aquatics.aspx" />
+    <Content Include="SportsandFitness\cycling.aspx" />
+    <Content Include="SportsandFitness\Fall_Sports.aspx" />
+    <Content Include="images\GH_Panthers_%2709-2.jpg" />
+    <Content Include="images\hawks_logo.jpg" />
+    <Content Include="images\Sports_Fitness09.jpg" />
+    <Content Include="SportsandFitness\Forms.aspx" />
+    <Content Include="SportsandFitness\oursports.aspx" />
+    <Content Include="Services.aspx" />
+    <Content Include="SportsandFitness\powerlifting.aspx" />
+    <Content Include="SportsandFitness\soccer.aspx" />
+    <Content Include="SportsandFitness\SportsandFitness.aspx" />
+    <Content Include="SportsandFitness\Summer_Sports.aspx" />
+    <Content Include="SportsandFitness\TrackandField.aspx" />
+    <Content Include="SportsandFitness\Winter_Sports.aspx" />
+    <Content Include="unsubscribe.aspx" />
+    <Content Include="GetInvolvedVolunteer.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\safari.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Browsers\avantgo.browser" />
+    <Content Include="App_Browsers\cassio.browser" />
+    <Content Include="App_Browsers\docomo.browser" />
+    <Content Include="App_Browsers\ericsson.browser" />
+    <Content Include="App_Browsers\EZWap.browser" />
+    <Content Include="App_Browsers\gateway.browser" />
+    <Content Include="App_Browsers\generic.browser" />
+    <Content Include="App_Browsers\goAmerica.browser" />
+    <Content Include="App_Browsers\ie.browser" />
+    <Content Include="App_Browsers\Jataayu.browser" />
+    <Content Include="App_Browsers\jphone.browser" />
+    <Content Include="App_Browsers\legend.browser" />
+    <Content Include="App_Browsers\MME.browser" />
+    <Content Include="App_Browsers\mozilla.browser" />
+    <Content Include="App_Browsers\netscape.browser" />
+    <Content Include="App_Browsers\nokia.browser" />
+    <Content Include="App_Browsers\openwave.browser" />
+    <Content Include="App_Browsers\opera.browser" />
+    <Content Include="App_Browsers\palm.browser" />
+    <Content Include="App_Browsers\panasonic.browser" />
+    <Content Include="App_Browsers\pie.browser" />
+    <Content Include="App_Browsers\webtv.browser" />
+    <Content Include="App_Browsers\winwap.browser" />
+    <Content Include="App_Browsers\xiino.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\UserAdmin\Useradmin.aspx" />
+    <Content Include="App_Browsers\WM6Plus.browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\CalendarAdmin\Calendar_Modify.aspx" />
+    <Content Include="Admin\CalendarAdmin\Calendar_Update_2.aspx" />
+    <Content Include="Admin\NewsAdmin\eNewletter_Update.aspx" />
+    <Content Include="Admin\NewsAdmin\eNewsletter_Modify.aspx" />
+    <Content Include="Admin\PicAdmin\PictureGallery_Modify.aspx" />
+    <Content Include="Admin\PicAdmin\PictureGallery_Update.aspx" />
+    <Content Include="Admin\UserAdmin\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\PicAdmin\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\NewsAdmin\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\CalendarAdmin\web.config" />
+    <Content Include="Admin\NewsAdmin\eNewsLetter_Email.aspx" />
+    <Content Include="Admin\UserAdmin\Board_Update_Tool.aspx" />
+    <Content Include="Admin\UserAdmin\SportsandFitness_Forms_Update_Tool.aspx" />
+    <Content Include="Admin\UserAdmin\Staff_Update_Tool.aspx" />
+    <Content Include="Counter.txt" />
+    <Content Include="images\arcn round logo.png" />
+    <Content Include="images\Facebook_Big_v2.jpg" />
+    <Content Include="images\mission_border.jpg" />
+    <Content Include="images\parent2parent logo.jpg" />
+    <Content Include="images\Picture1.png" />
+    <Content Include="Services.empbendescription.aspx" />
+    <Content Include="ServicesBenefitAnalysis.aspx" />
+    <Content Include="Servicesemploymentanalysis.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_LocalResources\" />
+    <Folder Include="bin\" />
+    <Folder Include="images\EnewsLetters\Temp\" />
+    <Folder Include="images\PictureGallery\Board\Temp\" />
+    <Folder Include="images\PictureGallery\HomePic\" />
+    <Folder Include="images\PictureGallery\Icon\" />
+    <Folder Include="images\PictureGallery\Original_HomePic\" />
+    <Folder Include="images\PictureGallery\Original_Icon\" />
+    <Folder Include="images\PictureGallery\Original_RecentPic\" />
+    <Folder Include="images\PictureGallery\RecentPic\" />
+    <Folder Include="images\PictureGallery\Staff\Temp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ConnectStrings.config" />
+    <Content Include="CustomControls.config" />
+    <Content Include="App_Themes\ArcGH_Theme\ArcGH.skin" />
+    <None Include="images\SFForms\Scholarship Application.pdf" />
+    <None Include="images\SFForms\Volunteer Opportunities.pdf" />
+    <None Include="images\Volunteer Registration Form-The Arc.pdf" />
+    <None Include="images\WSP Background Check.pdf" />
+    <Content Include="SMTP.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56284</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

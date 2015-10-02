@@ -1,0 +1,134 @@
+<!--
+
+    Browser capabilities information that enables Visual Studio 2005 & 2008
+
+    ASP.NET AJAX to recognize IE Mobile on the Windows Mobile 6 family of devices
+
+-->
+
+<browsers>
+    <browser id="IEMobile" parentID="WinCE">
+        <identification>
+            <userAgent match="IEMobile (?'version'\d+\.\d+)" />
+        </identification>
+        <capture>
+            <userAgent match="MSIE (?'msieMajorVersion'\d+)" />
+            <header name="UA-PIXELS" match="(?'screenWidth'\d+)x(?'screenHeight'\d+)" />
+        </capture>
+        <capabilities>
+            <capability name="breaksOnInlineElements"                  value="false" />                
+            <capability name="browser"                                 value="IEMobile" />
+            <capability name="cdf"                                     value="true" />
+            <capability name="defaultScreenPixelsHeight"               value="${screenHeight}" />
+            <capability name="defaultScreenPixelsWidth"                value="${screenWidth}" />
+            <capability name="ecmascriptversion"                       value="1.2" />
+            <capability name="javaapplets"                             value="true" />
+            <capability name="jscriptversion"                          value="5.6" />
+            <capability name="maximumRenderedPageSize"                 value="800000" />               
+            <capability name="msdomversion"                            value="3.0" />
+            <capability name="numberOfSoftkeys"                        value="2" />
+            <capability name="requiresAbsolutePostbackUrl"             value="false" />                
+            <capability name="requiresCommentInStyleElement"           value="false" />                
+            <capability name="requiresHiddenFieldValues"               value="false" />                
+            <capability name="requiresOnEnterForwardForCheckboxLists"  value="false" />                
+            <capability name="requiresXhtmlCssSuppression"             value="false" />                
+            <capability name="preferredImageMime"                      value="image/jpg" />            
+            <capability name="preferredRenderingMime"                  value="application/xhtml+xml" />>
+            <capability name="preferredRenderingType"                  value="xhtml-basic" />          >
+            <capability name="screenPixelsHeight"                      value="${screenHeight}" />
+            <capability name="screenPixelsWidth"                       value="${screenWidth}" />
+            <capability name="supportsBodyClassAttribute"              value="true" />                 
+            <capability name="supportsCallback"                        value="true" />
+            <capability name="supportsDivNoWrap"                       value="false" />                
+            <capability name="supportsNoWrapStyle"                     value="false" />                
+            <capability name="supportsSelectFollowingTable"            value="true" />                 
+            <capability name="supportsStyleElement"                    value="true" />                 
+            <capability name="supportsTitleElement"                    value="false" />
+            <capability name="supportsUrlAttributeEncoding"            value="true" />                 
+            <capability name="supportsXmlHttp"                         value="true" />
+            <capability name="tagwriter"                               value="System.Web.UI.HtmlTextWriter" />
+            <capability name="type"                                    value="MSIE ${msieMajorVersion}" />
+            <capability name="vbscript"                                value="true" />
+            <capability name="version"                                 value="${version}" />
+            <capability name="w3cdomversion"                           value="1.0" />
+            <capability name="win32"                                   value="true" />
+            <capability name="xml"                                     value="true" />
+        </capabilities>
+    </browser>
+
+    <!--
+    **************************************************************
+    Exclude IE Mobile Version On Late Releases of Windows Mobile 5 
+    **************************************************************
+    WM5 AKU 3.3 and later shipped with a version of IE Mobile that sends the new user agent string 
+    that includes the text "IEMobile", but does not provide the features necessary to work with 
+    ASP.NET AJAX so set capabilities appropriatly so that the ASP.NET server will render the page 
+    without the inclusion of AJAX features. 
+    -->
+    <browser id="IEMobileNotAspNetAjaxCapable" parentID="IEMobile">
+        <identification>
+            <capability name="version" match="6\.8" />
+        </identification>
+        <capabilities>
+            <capability name="supportsCallback"                        value="false" />
+            <capability name="w3cdomversion"                           value="0.0" />
+        </capabilities>
+    </browser>
+
+    <!--
+
+    ************************
+    Screen Color information
+    ************************
+    UA-COLOR Header
+    Set isColor capability to true and set the screenBitDepth based on the header value
+    Example UA-COLOR=color32 -> screenBitDepth=32, UA-COLOR=color16 -> screenBitDepth=16, etc.
+    -->
+
+    <gateway id="IEMobileColorScreenBitDepth" parentID="IEMobile">
+        <identification>
+            <header name="UA-COLOR" match="color(?'bitDepth'\d+)" />
+        </identification>
+        <capabilities>
+            <capability name="screenBitDepth"                          value="${bitDepth}" />
+            <capability name="isColor"                                 value="true" />
+        </capabilities>
+    </gateway> 
+
+    <!--
+    ************************
+    Pocket PC Input Type
+    ************************
+    -->
+    <gateway id="IEMobilePPC" parentID="IEMobile">
+        <identification>
+            <header name="UA-OS" match="Pocket PC" />
+        </identification>
+        <capabilities>
+            <capability name="inputType"                               value="virtualKeyboard" />
+        </capabilities>
+    </gateway> 
+
+    <!--
+    ************************
+    File Upload Capabilities
+    ************************
+    Upload is only supported on Windows Mobile 6 Professional
+    No header available that identifies a device as Professional vs. Classic so must infer 
+    through the combination of "Pocket PC" appearing in the UA-OS header and the device's ability
+    to initiate a voice call (capability is set by the UA-VOICE handling in gateway.browser).
+    This is not 100% reliable due to the fact that the voice capability may report 
+    false when the device has the phone turned off, 
+    -->
+    <gateway id="IEMobileUploadSupport" parentID="IEMobile">
+        <identification>
+            <header name="UA-OS" match="Pocket PC" />
+            <capability name="canInitiateVoiceCall" match="true"/>
+        </identification>
+        <capabilities>
+            <capability name="supportsFileUpload"   value="true" />
+        </capabilities>
+    </gateway>
+
+</browsers>
+
